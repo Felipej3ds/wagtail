@@ -28,7 +28,7 @@ def serve(request, path):
         result = fn(page, request, args, kwargs)
         if isinstance(result, HttpResponse):
             return result
-        #testando git
+        
 
     return on_serve_chain(page, request, args, kwargs)
 
