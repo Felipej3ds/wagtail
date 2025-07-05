@@ -1,7 +1,7 @@
 from wagtail import hooks
 from wagtail.admin import icons
 
-# Fixture para limpar hooks e cache
+
 import pytest
 
 @pytest.fixture(autouse=True)
@@ -21,7 +21,7 @@ def valid_icon_hook(icons_list):
     return icons_list
 
 def test_get_icons_sucesso():
-    # Chama get_icons e só verifica que retorna string não vazia
+
     result = icons.get_icons()
     assert isinstance(result, str)
     assert len(result) > 0
